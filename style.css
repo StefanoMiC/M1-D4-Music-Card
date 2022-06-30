@@ -16,8 +16,17 @@ body {
 }
 
 .song-card:hover {
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   box-shadow: 0 10px 40px -4px rgb(0 0 0 / 55%);
+}
+
+.song-card:hover .song-card__info {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.song-card:hover .song-card__play {
+  transform: translateX(0px);
 }
 
 .song-card img {
@@ -37,6 +46,8 @@ body {
   padding-left: 8px;
   padding-right: 8px;
   color: white;
+  transform: translateX(0px);
+  transition: transform 0.3s, opacity 0.2s;
 }
 
 .song-card__info_artist {
@@ -73,6 +84,9 @@ body {
   width: 50px;
   height: 50px;
   background-color: #27ae60;
+  cursor: pointer;
+  transform: translateX(-70px);
+  transition: transform 0.3s;
 }
 
 .song-card__play .triangle {
